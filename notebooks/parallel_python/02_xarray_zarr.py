@@ -2,50 +2,20 @@
 # jupyter:
 #   jupytext:
 #     cell_metadata_filter: all
-#     notebook_metadata_filter: all,-language_info
+#     cell_metadata_json: true
+#     formats: ipynb,py:percent
+#     notebook_metadata_filter: all,-language_info,-toc,-latex_envs
 #     text_representation:
 #       extension: .py
 #       format_name: percent
-#       format_version: '1.2'
-#       jupytext_version: 1.2.4
+#       format_version: '1.3'
+#       jupytext_version: 1.3.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
 #     name: python3
-#   latex_envs:
-#     LaTeX_envs_menu_present: true
-#     autoclose: false
-#     autocomplete: true
-#     bibliofile: biblio.bib
-#     cite_by: apalike
-#     current_citInitial: 1
-#     eqLabelWithNumbers: true
-#     eqNumInitial: 1
-#     hotkeys:
-#       equation: meta-9
-#     labels_anchors: false
-#     latex_user_defs: false
-#     report_style_numbering: false
-#     user_envs_cfg: false
-#   toc:
-#     base_numbering: 1
-#     nav_menu: {}
-#     number_sections: true
-#     sideBar: true
-#     skip_h1_title: false
-#     title_cell: Table of Contents
-#     title_sidebar: Contents
-#     toc_cell: true
-#     toc_position: {}
-#     toc_section_display: true
-#     toc_window_display: true
 # ---
 
-# %% [markdown] {"toc": true}
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#02:-xarray,-netcdf-and-zarr" data-toc-modified-id="02:-xarray,-netcdf-and-zarr-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>02: xarray, netcdf and zarr</a></span><ul class="toc-item"><li><span><a href="#The-current-defacto-standard-in-atmos/ocean-science" data-toc-modified-id="The-current-defacto-standard-in-atmos/ocean-science-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>The current defacto standard in atmos/ocean science</a></span></li><li><span><a href="#Some-challenges-with-netcdf" data-toc-modified-id="Some-challenges-with-netcdf-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Some challenges with netcdf</a></span></li><li><span><a href="#create-an-xarray" data-toc-modified-id="create-an-xarray-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>create an xarray</a></span></li><li><span><a href="#Download-toy-model-data" data-toc-modified-id="Download-toy-model-data-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Download toy model data</a></span></li><li><span><a href="#Sort-in-numeric-order" data-toc-modified-id="Sort-in-numeric-order-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Sort in numeric order</a></span></li><li><span><a href="#Make-an-xarray" data-toc-modified-id="Make-an-xarray-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>Make an xarray</a></span></li><li><span><a href="#Dump-to-a-zarr-file" data-toc-modified-id="Dump-to-a-zarr-file-1.7"><span class="toc-item-num">1.7&nbsp;&nbsp;</span>Dump to a zarr file</a></span></li></ul></li></ul></div>
-
-# %% [markdown]
 # # 02: xarray, netcdf and zarr
 #
 # Motivation:  how you store your data can an enormous effect on performance.

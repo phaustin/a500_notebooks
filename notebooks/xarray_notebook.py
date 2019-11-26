@@ -4,6 +4,7 @@
 #   jupytext:
 #     cell_metadata_filter: all
 #     cell_metadata_json: true
+#     formats: ipynb,py:percent
 #     notebook_metadata_filter: all,-language_info
 #     text_representation:
 #       extension: .py

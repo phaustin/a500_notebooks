@@ -1,3 +1,15 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.3.0
+# ---
+
 # %% [markdown]
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
 # <div class="toc"><ul class="toc-item"><li><span><a href="#Integrate-$\theta_v$-wrt-to-time-using-scipy.integrate" data-toc-modified-id="Integrate-$\theta_v$-wrt-to-time-using-scipy.integrate-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Integrate $\theta_v$ wrt to time using scipy.integrate</a></span></li></ul></div>
