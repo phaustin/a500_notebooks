@@ -14,6 +14,7 @@ import site
 from pathlib import Path
 
 path = Path(__file__).resolve()  # this file
+print(f"here is path {path}")
 this_dir = path.parent  # this folder
 notebooks_dir = this_dir.parent
 root_dir = notebooks_dir.parent
