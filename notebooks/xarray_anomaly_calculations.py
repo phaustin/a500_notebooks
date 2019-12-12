@@ -15,10 +15,6 @@
 #     name: python3
 # ---
 
-# %% [markdown] toc=true
-# <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Calculating-Climatologies-and-Anomalies-with-Xarray-and-Dask:" data-toc-modified-id="Calculating-Climatologies-and-Anomalies-with-Xarray-and-Dask:-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Calculating Climatologies and Anomalies with Xarray and Dask:</a></span><ul class="toc-item"><li><span><a href="#A-Workaround-for-a-Longstanding-Problem" data-toc-modified-id="A-Workaround-for-a-Longstanding-Problem-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>A Workaround for a Longstanding Problem</a></span><ul class="toc-item"><li><span><a href="#The-Dataset:-MERRA2-Daily-Surface-Temprature" data-toc-modified-id="The-Dataset:-MERRA2-Daily-Surface-Temprature-1.1.1"><span class="toc-item-num">1.1.1&nbsp;&nbsp;</span>The Dataset: MERRA2 Daily Surface Temprature</a></span></li><li><span><a href="#Default,-No-Rechunking" data-toc-modified-id="Default,-No-Rechunking-1.1.2"><span class="toc-item-num">1.1.2&nbsp;&nbsp;</span>Default, No Rechunking</a></span></li><li><span><a href="#With-Rechunking" data-toc-modified-id="With-Rechunking-1.1.3"><span class="toc-item-num">1.1.3&nbsp;&nbsp;</span>With Rechunking</a></span></li><li><span><a href="#The-Workaround:-Xarray.map_blocks" data-toc-modified-id="The-Workaround:-Xarray.map_blocks-1.1.4"><span class="toc-item-num">1.1.4&nbsp;&nbsp;</span>The Workaround: <code>Xarray.map_blocks</code></a></span></li></ul></li><li><span><a href="#Compute-the-climatology-and-anomalies-as-2D-maps" data-toc-modified-id="Compute-the-climatology-and-anomalies-as-2D-maps-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Compute the climatology and anomalies as 2D maps</a></span></li></ul></li></ul></div>
-
 # %% [markdown]
 # # Calculating Climatologies and Anomalies with Xarray and Dask:
 #
