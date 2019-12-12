@@ -23,6 +23,13 @@ from pathlib import Path
 import xarray as xr
 import re
 import os
+from dask.distributed import Client, LocalCluster
+
+
+if __name__ == "__main__":
+    cluster = LocalCluster()
+    client = Client(cluster)
+
 
 timestep = re.compile(r".*_(\d+).zarr")
 
