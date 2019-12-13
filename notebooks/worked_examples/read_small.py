@@ -64,7 +64,7 @@ for ds_zarr in zarr_in[:tlim]:
 zarr_time_ds = xr.combine_nested(zarr_list, 'time')
 #
 # now subset this
-# 
+#
 xlim = 40
 ylim = 50
 zlim = 60
@@ -75,6 +75,7 @@ zarr_slim_ds = zarr_time_ds.isel(x=slice(0, xlim),
 # we'll want to save the mean and perturbation
 #
 
+
 def calc_mean(the_array):
     the_mean = the_array.mean(dim=('x', 'y'))
     return the_mean
@@ -84,6 +85,8 @@ def calc_perturb(the_array):
     the_mean = calc_mean(the_array)
     the_perturb = the_array - the_mean
     return the_perturb
+
+
 #
 # save the perturbation and mean in separate dictionaries
 #
@@ -104,7 +107,7 @@ for a_var in vars:
 #
 # now make a new dataset with these variables
 #
-    
+
 new_ds = xr.Dataset(perturb_dict)
 #
 # and add the remaining means
@@ -112,16 +115,17 @@ new_ds = xr.Dataset(perturb_dict)
 for key, value in mean_dict.items():
     new_ds[key] = value
 
-zarr_out = context.scratch_dir / "testout2.zarr"
+user_name = os.environ['USER']
+out_dir = Path(f"/scratch/paustin/{user_name}")
+zarr_out = out_dir / "testout2.zarr"
+print(f"writing zarr file to: {str(out_dir) }")
 
 new_ds.compute()
-new_ds.to_zarr(zarr_out,'w')
+new_ds.to_zarr(zarr_out, 'w')
 #
 # zarr bug -- change permissions so that
 # everyone can read:  https://www.linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/
 # should be unnecessary after https://github.com/zarr-developers/zarr-python/pull/493
 #
-all_files=zarr_out.glob("**/*")
+all_files = zarr_out.glob("**/*")
 [item.chmod(0o755) for item in all_files]
-
-    
